@@ -1,4 +1,4 @@
-package com.corp.apishipment;
+package com.corp.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
