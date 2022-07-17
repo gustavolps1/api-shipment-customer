@@ -1,1 +1,12 @@
-
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5434/pgprd
+    username: root
+    password: root
+    driverClassName: org.postgresql.Driver
