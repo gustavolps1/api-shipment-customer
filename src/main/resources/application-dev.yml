@@ -3,7 +3,11 @@ spring:
     show-sql: true
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/pgdev
+    url: jdbc:postgresql://localhost:5432/pgdev?currentSchema=shipment
     username: root
     password: root
     driverClassName: org.postgresql.Driver
+server:
+  port: 8080
+  servlet:
+    context-path: /api-shipment

@@ -10,7 +10,7 @@ import java.util.UUID;
 
 @Data
 @Entity
-@Table(name = "customer", schema = "shipment")
+@Table(name = "customer")
 public class Customer {
     @Id
     @Column(name = "customer_id")
