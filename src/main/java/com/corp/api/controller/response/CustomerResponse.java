@@ -9,6 +9,6 @@ import lombok.Getter;
 @Builder
 public class CustomerResponse {
 
-    @JsonProperty("customer")
+    @JsonProperty("_content")
     private CustomerDTO customerDTO;
 }
