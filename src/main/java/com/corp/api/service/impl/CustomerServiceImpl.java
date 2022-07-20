@@ -5,7 +5,7 @@ import com.corp.api.dto.CustomerDTO;
 import com.corp.api.entity.Customer;
 import com.corp.api.repository.CustomerRepository;
 import com.corp.api.service.CustomerService;
-import com.corp.api.utils.IdentityDocumentUtils;
+import com.corp.api.utils.IdentityDocumentFormatterUtils;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,8 +17,6 @@ import java.util.Optional;
 public class CustomerServiceImpl implements CustomerService {
 
     private final CustomerRepository customerRepository;
-
-    private final IdentityDocumentUtils identityDocumentUtils;
 
     @Override
     public CustomerResponse getCustomerByIdentityDocument(String identityDocument) {
@@ -42,7 +40,7 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     private String formatIdentityDocument(String identityDocument) {
-        return identityDocumentUtils.format(identityDocument);
+        return IdentityDocumentFormatterUtils.cpf(identityDocument);
     }
 
 

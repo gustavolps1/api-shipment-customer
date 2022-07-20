@@ -6,9 +6,9 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 @Component
-public class IdentityDocumentUtils {
+public final class IdentityDocumentFormatterUtils {
 
-    public String format(String s) {
+    public static String cpf(String s) {
         final String[] splited = s.split("");
         final String TEMPLATE = "%s.%s.%s-%s";
 
@@ -23,7 +23,7 @@ public class IdentityDocumentUtils {
         return String.format(TEMPLATE, firstThreeDigits, secondThreeDigits, thirdThreeDigits, lastTwoDigits);
     }
 
-    private String stream(String[] splited, int skip, int limit) {
+    private static String stream(String[] splited, int skip, int limit) {
         return Arrays.stream(splited)
                 .skip(skip)
                 .limit(limit)
