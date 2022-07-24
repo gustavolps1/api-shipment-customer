@@ -8,6 +8,6 @@ spring:
     password: root
     driverClassName: org.postgresql.Driver
 server:
-  port: 8080
+  port: 9090
   servlet:
     context-path: /api-shipment
