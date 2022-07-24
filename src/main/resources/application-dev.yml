@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    show-sql: true
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/pgdev?currentSchema=shipment
+    username: root
+    password: root
+    driverClassName: org.postgresql.Driver
+server:
+  port: 9090
+  servlet:
+    context-path: /api-shipment
