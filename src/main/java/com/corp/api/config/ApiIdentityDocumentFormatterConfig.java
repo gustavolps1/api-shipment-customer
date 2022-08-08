@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ConfigurationProperties(prefix = "services.api-identity-document-formatter")
+@ConfigurationProperties(prefix = "integration.services.api-identity-document-formatter")
 public class ApiIdentityDocumentFormatterConfig {
 
     private String host;

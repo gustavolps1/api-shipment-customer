@@ -11,9 +11,10 @@ spring:
 server:
   port: 9090
   servlet:
-    context-path: /api-shipment
+    context-path: /api-shipment-customer
 
-services:
-  api-identity-document-formatter:
-    host: http://localhost:8080
-    resource: /api-identity-document-formatter
+integration:
+  services:
+    api-identity-document-formatter:
+      host: http://localhost:8080
+      resource: /api-identity-document-formatter

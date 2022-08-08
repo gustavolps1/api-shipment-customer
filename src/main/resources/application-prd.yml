@@ -3,7 +3,18 @@ spring:
     show-sql: true
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5434/pgprd
+    url: jdbc:postgresql://localhost:5434/pgprd?currentSchema=shipment
     username: root
     password: root
     driverClassName: org.postgresql.Driver
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api-shipment-customer
+
+integration:
+  services:
+    api-identity-document-formatter:
+      host: http://localhost:8080
+      resource: /api-identity-document-formatter
